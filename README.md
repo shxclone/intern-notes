@@ -31,3 +31,9 @@
    * Escalate up the levels if unable to resolve (Escalation is NOT a failure)
    * Learned about response times and how they're linked to the severity of the situation: the higher the severity, the lower the response time
    * Usually during code fixes, as developers we should test it in System Integration Testing (SIT). After testing and the issue is fixed, code changes are pushed to User Acceptance Testing (UAT) for the client to make sure the program is in accordance to their requirements. Once approved, the changes will be pushed to production.
+* Training on Git Lab done by Bernie & Chloe
+   * Went through basic commands such as:
+       * git checkout - change branch
+       * git merge - merge branches
+   * Go through proper sequencing - Pull from main before you make any changes on your own branch as main branch should always be the latest working version
+* Introduced to SHIP-HATS - CI/CD used by Singapore Government Tech Stack
