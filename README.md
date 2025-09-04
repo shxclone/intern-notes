@@ -37,3 +37,18 @@
        * git merge - merge branches
    * Go through proper sequencing - Pull from main before you make any changes on your own branch as main branch should always be the latest working version
 * Introduced to SHIP-HATS - CI/CD used by Singapore Government Tech Stack
+
+## Day 4
+* Training on Java by Seng Yong
+  * Gave us a run through of the code base used for HDB Place2Lease - uses MVC structure, Angular for front end, SpringBoot
+  * Practiced on a Java mini lab - Worked on a Servlet app, with DB connections to MySQL, hosted by Tomcat9 9 to display an image of the school, with our names pulled from the database displayed below it
+  * Learned how to use Servlet as I have never used it before
+* Francis sharing:
+  * Before you declare your work done, test beyond your computer
+  * As a Software Engineer, everything can be done. It is just whether the amount of money is right, how long it takes, and it is worth it do attempt
+  * Change Tomcat port - under Tomcat 9.0 > conf > server.xml
+  * .war file is where the program becomes portable
+  * Production should only have JRE (Java Run Time Environment)  and should not have JDK (Java Development Kit) - should not be able to write code in production
+* Went through a mandatory IT Security Awareness training session to ensure everyone understands the importance of protecting the company’s data and maintaining strong cybersecurity practices
+  * Watched a Security Awareness Training video
+  * Completed a questionnaire to test our understanding - 90% to pass
