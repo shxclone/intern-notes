@@ -74,4 +74,34 @@
   * Set up Dockerfile, python file and text file containing requirements
   * Ran a simple python program on docker that outputs Hello World and the current time in Singapore timezone
   * Ran a web based api chat app python program
-* 
+* Went through a lesson on Solution Architecture & Micro-services done by Kwan Jin (Chief Solutions Architect)
+  * How to practice solutions architecture
+  * Capacity planning
+  * Must be able to scale and easy to maintain
+  * Code modularity
+  * Componenets of a solution architecture
+    * Application
+    * Data
+    * Infrastructure
+    * Integration
+  * Impact areas if architecture is not well designed:
+    * Scalability
+    * Security
+    * Performance
+    * Maintainability
+  * Test driven design methodology
+  * Automated testing, to ensure results are consistent even after code change
+  * Leverage on things like micro-services
+    * Promotes modularity
+    * API communication
+    * Fault isolation
+    * Technology diversity - each service can have their own technology stack
+    * Independent services
+  * Why standards matter:
+    * Consistency
+    * Seamless interoperability
+    * Compliance - Security & Regulations
+    * Avoid unpredictability - Achieve reliabilty
+    * Easy to integrate new people
+  * Best Practices:
+    * Follow design patterns - makes code easier to understand (MVC, MVVM)
