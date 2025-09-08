@@ -105,3 +105,25 @@
     * Easy to integrate new people
   * Best Practices:
     * Follow design patterns - makes code easier to understand (MVC, MVVM)
+
+## Day 6
+* Training on .NET/C# by Yan Long
+  * .NET 5 and above is .NET Core; Below that is .NET Framework (Legacy)
+  * .NET 9 is the latest stable version, so that's what we will be using for now
+  * Windows Server is more expensive than others such as Linux/MacOS as they include the Windows License in the price
+  * Web Forms:
+    * Event-driven
+    * Drag and drop development
+    * Requires ViewState, PostBack, IIS
+    * Not available for .NET Core
+    * Lifecycle includes Page_Init, Page_Load, PostBack, etc
+    * Harder to maintain and scale
+    * Legacy, visual and tightly coupled
+  * Razor View Engine (MVC)
+    * Uses HTML and C#
+    * Uses @model, @html, loops, conditions inside views
+    * Clean separation from controller logic
+  * MVC (Framework) - At this point should only be used to maintain legacy apps, not recommended for new projects
+  * MVC (Core) - Use for new applications
+  * Tech Refresh refers to the updating of softwares to newer technologies - E.g. .NET Framework to .NET Core, implemented with maybe Docker, AI, etc
+  * Praticed on C# mini lab
