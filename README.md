@@ -33,8 +33,8 @@
    * Usually during code fixes, as developers we should test it in System Integration Testing (SIT). After testing and the issue is fixed, code changes are pushed to User Acceptance Testing (UAT) for the client to make sure the program is in accordance to their requirements. Once approved, the changes will be pushed to production.
 * Training on Git Lab done by Bernie & Chloe
    * Went through basic commands such as:
-       * git checkout - change branch
-       * git merge - merge branches
+       * `git checkout` - change branch
+       * `git merge` - merge branches
    * Go through proper sequencing - Pull from main before you make any changes on your own branch as main branch should always be the latest working version
 * Introduced to SHIP-HATS - CI/CD used by Singapore Government Tech Stack
 
@@ -57,20 +57,20 @@
 * Francis shared on how to map network drive:
   * Right click This PC > Map Network Drive
   * Using CLI:
-    * net use - see what connections you currently have
-    * net use <Drive(e.g. P:)> /del - delete a drive mapping
-    * net use  <Drive (e.g. P: \\10.0.0.106\projects)> - add a mapping
+    * `net use` - see what connections you currently have
+    * `net use` <Drive(e.g. P:)> /del - delete a drive mapping
+    * `net use`  <Drive (e.g. P: \\10.0.0.106\projects)> - add a mapping
 * Went through Tech Talk #1 on Docker done by Francis
 * Went through the mini lab on Docker following the Tech Talk by Francis
   * Practiced docker commands to pull image, run container, login and clean up:
-    * login.bat - bash file set up to handling logging in
-    * docker-clean.bat - bash file set up to clean up images and containers
-    * docker pull <image> - pull image from Docker Hub
-    * docker run -p <external-port>:<internal-port> --name <image name> - run docker image
-    * docker tag <image> <new image tag> - create a new tag pointing to the same image
-    * docker push <image> - push image to Docker Hub
-    * docker build -t <container name> . - build all the files in current directory
-    * docker run --rm <contianer name> - runs the container and automatically removes the container when it exits
+    * `login.bat` - bash file set up to handling logging in
+    * `docker-clean.bat` - bash file set up to clean up images and containers
+    * `docker pull <image>` - pull image from Docker Hub
+    * `docker run -p <external-port>:<internal-port> --name <image name>` - run docker image
+    * `docker tag <image> <new image tag>` - create a new tag pointing to the same image
+    * `docker push <image>` - push image to Docker Hub
+    * `docker build -t <container name> .` - build all the files in current directory
+    * `docker run --rm <contianer name>` - runs the container and automatically removes the container when it exits
   * Set up Dockerfile, python file and text file containing requirements
   * Ran a simple python program on docker that outputs Hello World and the current time in Singapore timezone
   * Ran a web based api chat app python program
@@ -126,4 +126,5 @@
   * MVC (Framework) - At this point should only be used to maintain legacy apps, not recommended for new projects
   * MVC (Core) - Use for new applications
   * Tech Refresh refers to the updating of softwares to newer technologies - E.g. .NET Framework to .NET Core, implemented with maybe Docker, AI, etc
-  * Praticed on C# mini lab
+  * Praticed on C# mini lab - Worked on a 3 tier app using .NET Core to display an image of the school, with our names pulled from the database displayed below it; Worked on a email sender program using C#
+  * 
