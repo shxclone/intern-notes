@@ -162,3 +162,4 @@
     * According to Government benchmark, performance needs to be a minimum of 90%; page should not take more than 3 seconds to load
   * These tools are usually used to replicate issues brought up by 3rd party vendors that are hired to do penetration testing
   * Once the issues are deemed resolved, these tools are used again to verify if the issue is truly resolved
+  * Francis came in to share about Microsoft SQL
