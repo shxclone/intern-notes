@@ -147,3 +147,18 @@
   * Need to know how to read application logs
   * Many applications are data driven
   * Knowing how to use triggers in sql can be useful as database will definitely be faster than code logic
+  * Oobee (previously known as Purple HATS or Purple A11y) is a open source accessibility tool that helps to identify accessibility issues in websites
+    * Has screen reader that reads aloud the contents displayed on a screen
+    * Clickable elements needs to have accessible labels so that screen readers are able to convey the purpose of the element
+  * Burp Suite is a tool used for penetration testing of web applicaitons for vulnerabilities
+    * Has a proxy function that can intercept packets - HTTP request and response
+    * Shows the importance of server validations as man in the middle is able to bypass the frontend validation and send in scripts 
+  * Google Lighthouse is an extention tool to audit performance, accessibility and best practices of a web page
+    * Categories include:
+      * Performance
+      * Accessibility
+      * SEO
+      * Best Practices
+    * According to Government benchmark, performance needs to be a minimum of 90%; page should not take more than 3 seconds to load
+  * These tools are usually used to replicate issues brought up by 3rd party vendors that are hired to do penetration testing
+  * Once the issues are deemed resolved, these tools are used again to verify if the issue is truly resolved
