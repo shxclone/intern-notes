@@ -1,6 +1,6 @@
 # IWSP Journal
 
-## Day 1:
+## Day 1 (01/09/25)
 * Onboarding done by Vienna (HR) on what WizVision is about
 * Collection of work laptop and set up access by IT
 * Francis (CEO) came to talk to us about internship experience and expectations - 3As: Attitute, Aptitude, Adaptability
@@ -8,7 +8,7 @@
 * Introduction to Tomcat mini lab - deployed a WebApp using .war file
 * Went through mini lab on Java & MySQL
 
-## Day 2
+## Day 2 (02/09/25)
 * Micro training overview done by Bernie & Chloe
   * Went through a list of softwares we might use
   * Mentioned that company can sponsor further studies/certifications
@@ -23,7 +23,7 @@
   * Port 587 for TLS (Transport Layer Security); Port 465 for SSL (Secure Sockets Layer)
 * Refresher on Git for the crash course tomorrow
 
- ## Day 3
+ ## Day 3 (03/09/25)
  * Training on support - handling customers by Jia Jun (Team Lead) & Yee Tang (PM)
    * Level 1 - Basic support: Ticket logging, password reset, help desk stuff
    * Level 2 - Intermediate support: Troubleshoot data, Configuration issues, Apply fixes that do not require code changes
@@ -38,7 +38,7 @@
    * Go through proper sequencing - Pull from main before you make any changes on your own branch as main branch should always be the latest working version
 * Introduced to SHIP-HATS - CI/CD used by Singapore Government Tech Stack
 
-## Day 4
+## Day 4 (04/09/25)
 * Training on Java by Seng Yong
   * Gave us a run through of the code base used for HDB Place2Lease - uses MVC structure, Angular for front end, SpringBoot
   * Practiced on a Java mini lab - Worked on a Servlet app, with DB connections to MySQL, hosted by Tomcat9 to display an image of the school, with our names pulled from the database displayed below it
@@ -53,7 +53,7 @@
   * Watched a Security Awareness Training video
   * Completed a questionnaire to test our understanding - 90% to pass
 
-## Day 5
+## Day 5 (05/09/25)
 * Francis shared on how to map network drive:
   * Right click This PC > Map Network Drive
   * Using CLI:
@@ -106,7 +106,7 @@
   * Best Practices:
     * Follow design patterns - makes code easier to understand (MVC, MVVM)
 
-## Day 6
+## Day 6 (08/09/25)
 * Training on .NET/C# by Yan Long
   * .NET 5 and above is .NET Core; Below that is .NET Framework (Legacy)
   * .NET 9 is the latest stable version, so that's what we will be using for now
@@ -126,5 +126,24 @@
   * MVC (Framework) - At this point should only be used to maintain legacy apps, not recommended for new projects
   * MVC (Core) - Use for new applications
   * Tech Refresh refers to the updating of softwares to newer technologies - E.g. .NET Framework to .NET Core, implemented with maybe Docker, AI, etc
-  * Praticed on C# mini lab - Worked on a 3 tier app using .NET Core to display an image of the school, with our names pulled from the database displayed below it; Worked on a email sender program using C#
-  * 
+  * Praticed on C# mini lab:
+    * Worked on a 3 tier app using .NET Core to display an image of the school, with our names pulled from the database displayed below it
+    * Worked on a email sender program using C#
+  * Practiced on Python - did the same 3 tier app and email sender in Python
+
+## Day 7 (09/09/25)
+* .NET Framework with Live Demo by Daphne & Han Zheng
+  * Goverment on Commercial Cloud (GCC) - used to facilitate secure and efficient cloud services
+  * Went through Singapore Memories architecture
+  * Went through Singapore Memories site demo & source code
+  * Did a mini 3 question quiz to test out understanding
+  * Went through deployment to staging:
+    * After changes are made and published, the changed file is copied over to NLB issued thumbdrive
+    * The thumbdrive is then connected to the NLB issued laaptop to extract the changed file
+    * Once extracted, FileZilla is used to upload the chnaged file onto the file server
+    * Access CyberArk to access the server and use winSCP to extract the file out of the file server
+    * Copy the original file into a back up folder in case it requires roll back
+    * Once backup is saved, the new file can be changed to deployment
+  * Need to know how to read application logs
+  * Many applications are data driven
+  * Knowing how to use triggers in sql can be useful as database will definitely be faster than code logic
