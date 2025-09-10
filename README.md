@@ -163,3 +163,24 @@
   * These tools are usually used to replicate issues brought up by 3rd party vendors that are hired to do penetration testing
   * Once the issues are deemed resolved, these tools are used again to verify if the issue is truly resolved
   * Francis came in to share about Microsoft SQL
+
+## Day 8 (10/09/25)
+* Practiced on Microsoft SQL through performing CRUD using Microsoft SQL CRUD
+* Lesson on Node.js by Francis
+  * There is a standard port for most applications - good to follow so as to not confuse people
+    * Microsoft SQL - 1433
+    * Node.js - 3000
+    * MySQL - 3306
+    * Tomcat - 8080
+  * Node.js should not be used for production scale as it is not secure
+  * Nginx can be used as a gateway
+  * Shared on outsystems - a low code system development platform
+  * Shared on Fortran (Formula Translation)
+* Sharing of NLB by Yong Hui
+  * Uses Hibernate to handle the database
+  * Slow loading issues reported when it takes 5-6 mins to check in
+  * After improvements, check in only took 17 seconds
+  * Fix was to use Eager Loading instead of Lazy Loading as when many lazy loading cells are triggered, many small queries are triggered causing the slow loading
+  * One query was made to collect all the data from the database and stored in hash map; When searched, the data is drawn from the hash map
+  * Indexing was also used to quicken the retrieval time
+* We were assigned our teams today - I am assigned to Yee Tang's team working on MOE using Java
