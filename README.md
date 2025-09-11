@@ -184,3 +184,12 @@
   * One query was made to collect all the data from the database and stored in hash map; When searched, the data is drawn from the hash map
   * Indexing was also used to quicken the retrieval time
 * We were assigned our teams today - I am assigned to Yee Tang's team working on MOE using Java
+* Had a short meeting with Yee Tang on what our team is doing and what are some expectations
+
+## Day 9 (11/09/25)
+* Setting up of IDE and environment
+* Was assigned a Change Request (CR) to complete
+* Explore the code base and try to understand what the code is like
+* Use jasper report to output the report format
+* Attached to MOE iEASA and NSG but currently only working on iEASA
+* Code base makes use of JDK, Ant, GWT, Tomcat and Oracle
