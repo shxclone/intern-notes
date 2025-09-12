@@ -1,4 +1,6 @@
 # IWSP Journal
+---
+# Log Period: Trimester 1 / Week 1 & 2
 
 ## Day 1 (01/09/25)
 * Onboarding done by Vienna (HR) on what WizVision is about
@@ -183,7 +185,7 @@
   * Fix was to use Eager Loading instead of Lazy Loading as when many lazy loading cells are triggered, many small queries are triggered causing the slow loading
   * One query was made to collect all the data from the database and stored in hash map; When searched, the data is drawn from the hash map
   * Indexing was also used to quicken the retrieval time
-* We were assigned our teams today - I am assigned to Yee Tang's team working on MOE using Java
+* We were assigned our teams today - I am assigned to Yee Tang's team working on MOE iEASA and NSG using Java
 * Had a short meeting with Yee Tang on what our team is doing and what are some expectations
 
 ## Day 9 (11/09/25)
@@ -193,3 +195,11 @@
 * Use jasper report to output the report format
 * Attached to MOE iEASA and NSG but currently only working on iEASA
 * Code base makes use of JDK, Ant, GWT, Tomcat and Oracle
+
+## Day 10 (12/09/25)
+* Was told to do another CR first which is simpler in order to gain some understanding of the system before tackling other CRs
+* CR was about splitting a batch job - currently it is 1 batch job that handles multiple levels; my task is to split the batch job up into 4 batch jobs, by levels
+---
+# Log Period: Trimester 1 / Week 3 & 4
+
+## Day 11 (15/09/25)
