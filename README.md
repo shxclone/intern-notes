@@ -203,3 +203,14 @@
 # Log Period: Trimester 1 / Week 3 & 4
 
 ## Day 11 (15/09/25)
+* Wrapped up the CR on splitting the batch job and push up to GitLab
+
+## Day 12 (16/09/25)
+* Started on the first CR - creating 4 batch jobs to generate reports for different levels
+* Completed the CR and moved onto another CR which is similar to the first
+* Wrote the sql queries used to insert batch jobs into the database so DBA on MOE side can replicate
+
+## Day 13 (17/09/25)
+* Wrapping up the CR, wrote the test case for UAT
+* Fixed some minor details pertaining to the last 2 CRs
+* 
