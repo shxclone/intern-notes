@@ -213,4 +213,7 @@
 ## Day 13 (17/09/25)
 * Wrapping up the CR, wrote the test case for UAT
 * Fixed some minor details pertaining to the last 2 CRs
-* 
+* Faced issue - when user is trying to download a report, it should give the report pertaining to the user but instead it gives the consolidated report
+
+## Day 14(18/09/25) 
+* Working on the issue faced yesterday
