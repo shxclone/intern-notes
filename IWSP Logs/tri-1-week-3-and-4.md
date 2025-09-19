@@ -32,6 +32,10 @@
 * Completed the CR, pending review from Jia Jun
 * Wrote the SQL queries used to insert batch jobs for replication
 * Wrote the test case for UAT
+* Was told that report generated had to be filtered by student_type
+* I previously just removed the filter as I thought it was not needed, now have to put it back
+* Had to generate some dummy data to test whether the filter works 
+* Update UAT to check for additional filter
 
 ## Day 16 (22/09/25)
 
