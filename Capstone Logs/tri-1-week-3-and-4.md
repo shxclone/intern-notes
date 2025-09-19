@@ -13,6 +13,13 @@
 * Requested for Industry Capstone projects from Francis for our consideration
 
 ## Day 15(19/09/25)
+* Met with Francis to discuss Capstone project
+    * Can be something linked with payment, pay out for awards
+    * Try to align with iEASA
+    * Must have a clear separation from what I am doing with iEASA
+    * data.gov.sg - goverment dataset
+    * If by next week still cannot decide, Francis can come up with some ideas but it may be very complicated and may not be very ideal as his ideas is something the company does not have
+    * Do not think complex ideas are a bad idea as higher complexity can lead to better results
 
 ## Day 16 (22/09/25)
 

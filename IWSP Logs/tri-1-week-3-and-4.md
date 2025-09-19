@@ -6,7 +6,7 @@
 ## Day 12 (16/09/25)
 * Started on the first CR - creating 4 batch jobs to generate reports for different levels
 * Completed the CR and moved onto another CR which is similar to the first
-* Wrote the sql queries used to insert batch jobs into the database so DBA on MOE side can replicate
+* Wrote the SQL queries used to insert batch jobs into the database so DBA on MOE side can replicate
 
 ## Day 13 (17/09/25)
 * Wrapping up the CR, wrote the test case for UAT
@@ -28,6 +28,10 @@
 * Was assigned another CR to work on another batch job which I do not quite understand, need further clarrification but Jia Jun is not around. May have to do so tomorrow
 
 ## Day 15(19/09/25)
+* Clarrified with Jia Jun on the details of the CR. Turns out it is also similar to the previous few CRs I had done
+* Completed the CR, pending review from Jia Jun
+* Wrote the SQL queries used to insert batch jobs for replication
+* Wrote the test case for UAT
 
 ## Day 16 (22/09/25)
 
