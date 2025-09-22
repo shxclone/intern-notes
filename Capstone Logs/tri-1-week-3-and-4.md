@@ -22,6 +22,11 @@
     * Do not think complex ideas are a bad idea as higher complexity can lead to better results
 
 ## Day 16 (22/09/25)
+* Texted Francis to request for some ideas, he said he will send to his backend to propose some ideas for me - have yet to get back to me
+* Spent the day exploring and researching possible Capstone ideas
+* Have a few potential ideas:
+    * Simplified Batch Job Creation Platform
+    * Jasper to Apache POI Modernization
 
 ## Day 17 (23/09/25)
 

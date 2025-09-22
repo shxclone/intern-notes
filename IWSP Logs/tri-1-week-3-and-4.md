@@ -38,6 +38,10 @@
 * Update UAT to check for additional filter
 
 ## Day 16 (22/09/25)
+* Spent most of the day focusing on Capstone 
+* Add on to previous CR to create new batch jobs for a different student type
+* Fixed spelling error on generated report 
+* Fixed report type erorr causing the report to appear under the wrong user account
 
 ## Day 17 (23/09/25)
 
