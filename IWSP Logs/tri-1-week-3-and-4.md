@@ -44,6 +44,9 @@
 * Fixed report type erorr causing the report to appear under the wrong user account
 
 ## Day 17 (23/09/25)
+* Lesson by Francis on Load Balancing
+    * Played around with Locust
+* Continue brain-storming about Capstone idea
 
 ## Day 18 (24/09/25)
 

@@ -29,6 +29,12 @@
     * Jasper to Apache POI Modernization
 
 ## Day 17 (23/09/25)
+* Francis said that jobs that are forgotten or done everyday should be automated
+* Francis came up with a few pain points that was brought up:
+    * Forgotten batch jobs - they normally run on their own so once created they are left alone and tend to be forgotten as there are so many batch jobs
+    * Password updates causes batch job failures as sometimes passwords are inevitably hard coded into batch jobs. When password updates, the batch jobs then fail as access is no longer granted
+* Leaning towards forgotten batch job ideas
+* Expanding on that idea and drafting proposal for approval by Francis and Jacob
 
 ## Day 18 (24/09/25)
 
