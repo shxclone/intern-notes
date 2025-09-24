@@ -40,6 +40,10 @@
 * Finished up the proposal, decided on Batch Job Lifecycle Monitor
 * Sent to Francis for approval
 * Approved by Francis, sent to Jacob for approval
+* Received Jacob's approval near end of the day and he brought up a few suggestions:
+    * Machine Learning for anomaly detection in job behaviour - will try to implement if time permits
+    * Role-based access control - have to implement for enterprise-grade security
+* Have to transfer my proposal into the proposal template provided by SIT and get Francis to sign before submission
 
 ## Day 19 (25/09/25)
 
