@@ -37,6 +37,9 @@
 * Expanding on that idea and drafting proposal for approval by Francis and Jacob
 
 ## Day 18 (24/09/25)
+* Finished up the proposal, decided on Batch Job Lifecycle Monitor
+* Sent to Francis for approval
+* Approved by Francis, sent to Jacob for approval
 
 ## Day 19 (25/09/25)
 

@@ -47,8 +47,13 @@
 * Lesson by Francis on Load Balancing
     * Played around with Locust
 * Continue brain-storming about Capstone idea
+* Had to continue working on previous CR due to changes in requirement - previously had the report generated in excel using jasper but new requirement needs the reports in txt and there are several reports to be generated (Follow what was previously done)
 
 ## Day 18 (24/09/25)
+* Continued working on the previous CR as was informed of changes required quite late yesterday, so unable to finish
+* Even more changes in requirement today - now need the same batch job but for every student type
+* Only converted 4 batch jobs yesterday, need to convert 4 more for Poly students
+* Need to create 8 more batch jobs for ITE batch 1 and ITE batch 2
 
 ## Day 19 (25/09/25)
 
