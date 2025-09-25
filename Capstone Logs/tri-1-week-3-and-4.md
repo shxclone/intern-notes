@@ -46,5 +46,6 @@
 * Have to transfer my proposal into the proposal template provided by SIT and get Francis to sign before submission
 
 ## Day 19 (25/09/25)
+* Started working on the Capstone proposal, to fill up the template provided by SIT
 
 ## Day 20 (26/09/25)

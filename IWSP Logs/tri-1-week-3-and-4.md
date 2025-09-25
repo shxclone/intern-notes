@@ -56,5 +56,8 @@
 * Need to create 8 more batch jobs for ITE batch 1 and ITE batch 2
 
 ## Day 19 (25/09/25)
+* Continued working on the changes presented yesterday
+* Finished converting all the batch job to meet the changed requirements, tested in SIT and pushed to Git 
 
 ## Day 20 (26/09/25)
+* Back to Campus for workshop
