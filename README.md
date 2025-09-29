@@ -10,6 +10,7 @@ This repository contains a comprehensive daily journal of my Industrial Work-Stu
 - **`Capstone Logs`** - Daily journal of what has been done for Capstone
 - **`IWSP BiWeekly Submission`** - Submission of IWSP BiWeekly Logs using template provided
 - **`IWSP Logs`** - Daily journal of what has been done for IWSP
+- **`Capstone_Project`** - Project app directory
 - **`README.md`** - This overview document
 
 ### Future Structure
@@ -29,6 +30,10 @@ This repository contains a comprehensive daily journal of my Industrial Work-Stu
 ├── IWSP Logs
 │   ├── tri-1-week-1-and-2.md
 │   ├── tri-1-week-3-and-4.md
+│   └── ...
+├── Capstone_Project
+│   ├── ...
+│   ├── ...
 │   └── ...
 └── README.md
 ```
