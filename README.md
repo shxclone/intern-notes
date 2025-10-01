@@ -38,6 +38,41 @@ This repository contains a comprehensive daily journal of my Industrial Work-Stu
 └── README.md
 ```
 
+## Capstone Deliverables
+- **System Design & Architecture**
+    - 29th September 2025 – 2nd November 2025
+    - Define architecture, technology stack, and integration approach.
+- **Job Execution Tracking & History Logging**
+    - 3rd November 2025 – 7th December 2025
+    - Develop core tracking features to capture job states, runtimes, and history.
+
+- **Rule-Based Governance Engine**
+    - 8th December 2025 – 11th January 2026
+    - Implement configurable rules such as runtime thresholds and inactivity detection.
+
+- **Redundancy & Obsolescence Flagging**
+    - 12th January 2026 – 25th January 2026
+    - Build features to identify outdated, redundant, or inactive jobs.
+
+- **Automated Alerting System**
+    - 26th January 2026 – 15th February 2026
+    - Implement notifications for jobs breaching configured rules.
+
+- **User Dashboard**
+    - 16th February 2026 – 8th March 2026
+    - Develop an interactive dashboard to visualize job states, and governance insights.
+
+- **System Testing & Validation**
+    - 9th March 2026 – 18th March 2026
+    - Conduct functional testing, rules validation, and administrative review
+
+### Notes/Future considerations
+- Global error handler / retry policy
+- Cleanup/archiving policy for old job_execution_history rows (so the table doesn't grow endlessly)
+- How to resolve jobs that depend on a gateway or with external parties - we have no jurisdiction over their system
+- Machine learning for anomaly detection in job behaviour
+- Role-based access control
+
 ## Program Details
 - **Company**: WizVision
 - **Duration**: 7 months and 9 days

@@ -8,10 +8,13 @@
     * Removed rows from database that are no longer relevant
 
 ## Day 22 (30/09/25)
-
+* Tested an interface on SIT and sent feedback for improvement to Jia Jun
 
 ## Day 23 (01/10/25)
-
+* Prepare CR Form for new CR
+* Generate slift cert using Privy
+* Generate ssh keys using PuTTYgen
+* Used openssl to generate cert of different file type (.cer to .crt)
 
 ## Day 24(02/10/25) 
 

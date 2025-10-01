@@ -36,6 +36,9 @@ public class Job {
     @Column(name = "schedule_period", length = 50)
     private String schedulePeriod; // Schedule Period (e.g., Daily, Weekly)
 
+    @Column(name = "cron_expression", length = 100)
+    private String cronExpression;
+
     @Column(name = "start_date")
     private LocalDate startDate;
 
@@ -131,6 +134,14 @@ public class Job {
 
     public void setSchedulePeriod(String schedulePeriod) {
         this.schedulePeriod = schedulePeriod;
+    }
+
+    public String getCronExpression() {
+        return cronExpression;
+    }
+
+    public void setCronExpression(String cronExpression) {
+        this.cronExpression = cronExpression;
     }
 
     public LocalDate getStartDate() {

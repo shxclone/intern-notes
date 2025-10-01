@@ -8,6 +8,7 @@ CREATE TABLE jobs (
     job_code VARCHAR(200),
     last_result VARCHAR(500),
     schedule_period VARCHAR(50),
+    cron_expression VARCHAR(100),
     start_date DATE,
     end_date DATE,
     run_time VARCHAR(10),
@@ -19,13 +20,22 @@ CREATE TABLE jobs (
 );
 
 CREATE TABLE job_exceptions (
-    job_id          VARCHAR(15)   NOT NULL,
+    job_id          VARCHAR(200)   NOT NULL,
     record_key      BIGSERIAL     NOT NULL,
     excep_id        VARCHAR(20),
     excep_desc      VARCHAR(4000),
     date_created    TIMESTAMP     DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT pk_job_exceptions PRIMARY KEY (job_id, record_key)
+);
+
+CREATE TABLE job_execution_history (
+    id SERIAL PRIMARY KEY,
+    job_id VARCHAR(200) NOT NULL,
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP,
+    status VARCHAR(10),
+    message TEXT
 );
 
 INSERT INTO jobs (
@@ -37,6 +47,7 @@ INSERT INTO jobs (
     job_code,
     last_result,
     schedule_period,
+    cron_expression,
     start_date,
     end_date,
     run_time,
@@ -46,14 +57,12 @@ INSERT INTO jobs (
     date_updated,
     job_type
 ) VALUES
-('Daily Award Sync', 'Y', NOW() - INTERVAL '1 day', 'SUCCESS', NOW() + INTERVAL '1 day', 'JOB_SYNC_001', 'Last run completed successfully', 'DAILY', NOW() - INTERVAL '30 days', NULL, '02:00', 'system', 'system', NOW(), NOW(), 1),
-
-('Weekly Report Generation', 'Y', NOW() - INTERVAL '7 days', 'IN_PROGRESS', NOW() + INTERVAL '7 days', 'JOB_REP_002', 'Report generation in progress', 'WEEKLY', NOW() - INTERVAL '60 days', NULL, '04:00', 'system', 'admin', NOW(), NOW(), 2),
-
-('Monthly Cleanup', 'N', NOW() - INTERVAL '30 days', 'ERROR', NOW() + INTERVAL '30 days', 'JOB_CLN_003', 'Disk space cleanup failed', 'MONTHLY', NOW() - INTERVAL '120 days', NULL, '23:00', 'system', 'admin', NOW(), NOW(), 3);
+('Daily Award Sync', 'Y', NOW() - INTERVAL '1 day', 'S', NOW() + INTERVAL '1 day', 'JOB_SYNC_001', 'S', 'DAILY', '0 0 2 * * ?', NOW() - INTERVAL '30 days', NULL, '02:00', 'system', 'system', NOW(), NOW(), 1),
+('Weekly Report Generation', 'Y', NOW() - INTERVAL '7 days', 'P', NOW() + INTERVAL '7 days', 'JOB_REP_002', 'P', 'WEEKLY', '0 0 4 * * ?', NOW() - INTERVAL '60 days', NULL, '04:00', 'system', 'admin', NOW(), NOW(), 2),
+('Monthly Cleanup', 'N', NOW() - INTERVAL '30 days', 'E', NOW() + INTERVAL '30 days', 'JOB_CLN_003', 'E', 'MONTHLY', '0 0 23 1 * ?', NOW() - INTERVAL '120 days', NULL, '23:00', 'system', 'admin', NOW(), NOW(), 3);
 
 INSERT INTO job_exceptions (job_id, excep_id, excep_desc, date_created)
 VALUES
 ('JOB_CLN_003', 'EX001', 'Disk write permission denied during cleanup', NOW() - INTERVAL '30 days'),
 ('JOB_CLN_003', 'EX002', 'Cleanup timed out while deleting temp files', NOW() - INTERVAL '30 days' + INTERVAL '5 minutes'),
-('JOB_REP_002', 'EX003', 'Connection to reporting DB was slow, retry scheduled', NOW() - INTERVAL '1 hour');
+('JOB_REP_002', 'EX003', 'Connection to reporting DB timed out, retry scheduled', NOW() - INTERVAL '1 hour');
