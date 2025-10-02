@@ -18,7 +18,8 @@
 * Ensure batch jobs are scheduled and run when it is the scheduled time 
 
 ## Day 24(02/10/25) 
-
+* Setup backend logic so that users can run/edit batchjob
+* Starting to set up frontned for job execution and history tracking
 
 ## Day 25(03/10/25)
 

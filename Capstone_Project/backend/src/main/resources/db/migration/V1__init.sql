@@ -20,7 +20,7 @@ CREATE TABLE jobs (
 );
 
 CREATE TABLE job_exceptions (
-    job_id          VARCHAR(200)   NOT NULL,
+    job_code          VARCHAR(200)   NOT NULL,
     record_key      BIGSERIAL     NOT NULL,
     excep_id        VARCHAR(20),
     excep_desc      VARCHAR(4000),
@@ -29,7 +29,7 @@ CREATE TABLE job_exceptions (
     CONSTRAINT pk_job_exceptions PRIMARY KEY (job_id, record_key)
 );
 
-CREATE TABLE job_execution_history (
+CREATE TABLE job_history (
     id SERIAL PRIMARY KEY,
     job_id VARCHAR(200) NOT NULL,
     start_time TIMESTAMP NOT NULL,
@@ -61,7 +61,7 @@ INSERT INTO jobs (
 ('Weekly Report Generation', 'Y', NOW() - INTERVAL '7 days', 'P', NOW() + INTERVAL '7 days', 'JOB_REP_002', 'P', 'WEEKLY', '0 0 4 * * ?', NOW() - INTERVAL '60 days', NULL, '04:00', 'system', 'admin', NOW(), NOW(), 2),
 ('Monthly Cleanup', 'N', NOW() - INTERVAL '30 days', 'E', NOW() + INTERVAL '30 days', 'JOB_CLN_003', 'E', 'MONTHLY', '0 0 23 1 * ?', NOW() - INTERVAL '120 days', NULL, '23:00', 'system', 'admin', NOW(), NOW(), 3);
 
-INSERT INTO job_exceptions (job_id, excep_id, excep_desc, date_created)
+INSERT INTO job_exceptions (job_code, excep_id, excep_desc, date_created)
 VALUES
 ('JOB_CLN_003', 'EX001', 'Disk write permission denied during cleanup', NOW() - INTERVAL '30 days'),
 ('JOB_CLN_003', 'EX002', 'Cleanup timed out while deleting temp files', NOW() - INTERVAL '30 days' + INTERVAL '5 minutes'),

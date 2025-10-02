@@ -4,15 +4,15 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "job_execution_history")
-public class JobExecutionHistory {
+@Table(name = "jobn_history")
+public class JobHistory {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "job_id", length = 200, nullable = false)
-    private String jobId;
+    @Column(name = "job_code", length = 200, nullable = false)
+    private String jobCode;
 
     @Column(name = "start_time", nullable = false)
     private LocalDateTime startTime;
@@ -36,12 +36,12 @@ public class JobExecutionHistory {
         this.id = id;
     }
 
-    public String getJobId() {
-        return jobId;
+    public String getJobCode() {
+        return jobCode;
     }
 
-    public void setJobId(String jobId) {
-        this.jobId = jobId;
+    public void setJobCode(String jobCode) {
+        this.jobCode = jobCode;
     }
 
     public LocalDateTime getStartTime() {

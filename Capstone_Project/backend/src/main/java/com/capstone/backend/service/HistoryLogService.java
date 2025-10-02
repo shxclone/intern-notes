@@ -1,7 +1,7 @@
 package com.capstone.backend.service;
 
-import com.capstone.backend.model.JobExecutionHistory;
-import com.capstone.backend.repository.JobExecutionHistoryRepository;
+import com.capstone.backend.model.JobHistory;
+import com.capstone.backend.repository.JobHistoryRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.PrintWriter;
@@ -15,15 +15,15 @@ public class HistoryLogService {
     public static final String STATUS_ERROR = "E";
     public static final String STATUS_RUNNING = "P";
 
-    private final JobExecutionHistoryRepository repo;
+    private final JobHistoryRepository repo;
 
-    public HistoryLogService(JobExecutionHistoryRepository repo) {
+    public HistoryLogService(JobHistoryRepository repo) {
         this.repo = repo;
     }
 
     public Long start(String jobCode) {
-        JobExecutionHistory history = new JobExecutionHistory();
-        history.setJobId(jobCode);
+        JobHistory history = new JobHistory();
+        history.setJobCode(jobCode);
         history.setStartTime(LocalDateTime.now());
         history.setStatus(STATUS_RUNNING);
         return repo.save(history).getId();
