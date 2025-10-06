@@ -18,7 +18,7 @@ public class SimpleQuartzJob extends BaseQuartzJob {
 
         // Simulate job
         logger.info("Executing job: {}", context.getJobDetail().getKey());
-        Thread.sleep(2000); // Simulate work by sleeping for 2 seconds
+        Thread.sleep(10000); // Simulate work by sleeping for 10 seconds
 
         processed = 100; // Simulate processing 100 records
 

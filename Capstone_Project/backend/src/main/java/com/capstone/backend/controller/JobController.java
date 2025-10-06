@@ -4,20 +4,27 @@ import com.capstone.backend.dto.JobDTO;
 import com.capstone.backend.dto.JobUpdateDTO;
 import com.capstone.backend.model.Job;
 import com.capstone.backend.repository.JobRepository;
+import com.capstone.backend.service.JobExecutorService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.quartz.SchedulerException;
+import org.quartz.CronExpression;
 
 import java.util.List;
-import java.time.LocalDateTime;
 import java.util.Map;
+import java.util.Date;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 @RestController
 @RequestMapping("/api/jobs")
 public class JobController {
     private final JobRepository repo;
+    private final JobExecutorService jobExecutorService;
 
-    public JobController(JobRepository repo) {
+    public JobController(JobRepository repo, JobExecutorService jobExecutorService) {
         this.repo = repo;
+        this.jobExecutorService = jobExecutorService;
     }
 
     @GetMapping
@@ -57,7 +64,30 @@ public class JobController {
         job.setDateUpdated(LocalDateTime.now());
         job.setUpdatedBy("system"); // Placeholder, replace with actual user info
 
+        try {
+            CronExpression cronExpression = new CronExpression(cron);
+            Date nextValidTime = cronExpression.getNextValidTimeAfter(new Date());
+            if (nextValidTime != null) {
+                job.setNextTriggerDate(nextValidTime.toInstant()
+                        .atZone(ZoneId.systemDefault())
+                        .toLocalDateTime());
+            }
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(Map.of(
+                "error", "Invalid cron expression: " + e.getMessage()
+            ));
+        }
+
         repo.save(job);
+
+        try {
+            jobExecutorService.rescheduleJob(job);
+        } catch (SchedulerException e) {
+            return ResponseEntity.internalServerError().body(Map.of(
+                    "error", "Failed to reschedule job",
+                    "details", e.getMessage()
+            ));
+        }
 
         return ResponseEntity.ok(Map.of(
                 "message", "Job " + job.getJobCode() + " updated successfully",
@@ -73,6 +103,27 @@ public class JobController {
         repo.delete(job);
     }
 
+    @PostMapping("/{id}/trigger")
+    public ResponseEntity<?> triggerJob(@PathVariable Long id) {
+        try {
+            jobExecutorService.runJobNow(id);
+            return ResponseEntity.ok(Map.of(
+                "message", "Job triggered successfully",
+                "jobId", id
+            ));
+        } catch (SchedulerException e) {
+            return ResponseEntity.internalServerError().body(Map.of(
+                "error", "Failed to trigger job",
+                "details", e.getMessage()
+            ));
+        } catch (Exception e) {
+            return ResponseEntity.internalServerError().body(Map.of(
+                "error", e.getMessage()
+            ));
+        }
+    }
+
+
     // Mapper
     private JobDTO toDto(Job job){
         JobDTO dto = new JobDTO();
@@ -85,6 +136,7 @@ public class JobController {
         dto.setLastTriggeredDate(job.getLastTriggeredDate());
         dto.setNextTriggerDate(job.getNextTriggerDate());
         dto.setLastResult(job.getLastResult());
+        dto.setSchedulePeriod(job.getSchedulePeriod());
         dto.setCronExpression(job.getCronExpression());
         return dto;
     }

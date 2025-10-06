@@ -12,6 +12,7 @@ public class JobDTO {
     private LocalDateTime lastTriggeredDate;
     private LocalDateTime nextTriggerDate;
     private String lastResult;
+    private String schedulePeriod;
     private String cronExpression;
 
     // Getters and Setters
@@ -85,6 +86,14 @@ public class JobDTO {
 
     public void setLastResult(String lastResult) {
         this.lastResult = lastResult;
+    }
+
+    public String getSchedulePeriod() {
+        return schedulePeriod;
+    }
+
+    public void setSchedulePeriod (String schedulePeriod) {
+        this.schedulePeriod = schedulePeriod;
     }
 
     public String getCronExpression() {

@@ -22,8 +22,8 @@ public class JobHistoryController {
     }
 
     @GetMapping
-    public List<JobHistoryDTO> getAllHistory () {
-        return repo.findAll()
+    public List<JobHistoryDTO> getRecentHistory () {
+        return repo.findRecentHistory()
                 .stream()
                 .map(this::toDto)
                 .toList();

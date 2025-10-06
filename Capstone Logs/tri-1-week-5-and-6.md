@@ -19,12 +19,19 @@
 
 ## Day 24(02/10/25) 
 * Setup backend logic so that users can run/edit batchjob
-* Starting to set up frontned for job execution and history tracking
+* Starting to set up frontend for job execution and history tracking
 
 ## Day 25(03/10/25)
-
+* Setup frontend for jobs page to display jobs table with 'Run Now' and 'Edit' actions
+* Edit to pop up a window, pulling current data from database and display as default value
+* Table should refresh and display new data when saved
+* Run now to trigger job straight away and pop up status feedback ("success or failure")
+* Faced some bugs where edit pop up was not showing up
 
 ## Day 26 (06/10/25)
+* Fixed bug on edit pop up
+* Added on to edit function to ensure changes to CRON expression is translated to the next trigger date
+* History table to display the last 100 jobs with most recent jobs at the top
 
 
 ## Day 27 (07/10/25)

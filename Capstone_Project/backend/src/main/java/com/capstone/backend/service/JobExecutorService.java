@@ -53,4 +53,51 @@ public class JobExecutorService {
         }
         scheduler.start();
     }
+
+    public void runJobNow(Long id) throws SchedulerException {
+        Scheduler scheduler = schedulerFactoryBean.getScheduler();
+        Job job = jobRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Job not found with ID: " + id));
+
+        JobDetail jobDetail = JobBuilder.newJob(SimpleQuartzJob.class)
+                .withIdentity(job.getJobCode() + "_manual", "manual-group")
+                .usingJobData("jobId", job.getId())
+                .usingJobData("jobCode", job.getJobCode())
+                .build();
+
+        Trigger trigger = TriggerBuilder.newTrigger()
+                .withIdentity(job.getJobCode() + "_manual_trigger", "manual-group")
+                .startNow()
+                .build();
+
+        scheduler.scheduleJob(jobDetail, trigger);
+        scheduler.start();
+
+        logger.info("Manually triggered job: {}", job.getJobCode());
+    }
+
+    public void rescheduleJob(Job job) throws SchedulerException {
+        Scheduler scheduler = schedulerFactoryBean.getScheduler();
+        JobKey jobKey = new JobKey(job.getJobCode(), "DEFAULT"); // adjust group if you use one
+        TriggerKey triggerKey = new TriggerKey(job.getJobCode() + "_trigger", "DEFAULT");
+
+        // If the job doesn’t exist yet, create it first
+        if (!scheduler.checkExists(jobKey)) {
+            JobDetail jobDetail = JobBuilder.newJob(SimpleQuartzJob.class)
+                    .withIdentity(jobKey)
+                    .build();
+            CronTrigger newTrigger = TriggerBuilder.newTrigger()
+                    .withIdentity(triggerKey)
+                    .withSchedule(CronScheduleBuilder.cronSchedule(job.getCronExpression()))
+                    .build();
+            scheduler.scheduleJob(jobDetail, newTrigger);
+        } else {
+            // Replace the existing trigger with the updated cron
+            CronTrigger newTrigger = TriggerBuilder.newTrigger()
+                    .withIdentity(triggerKey)
+                    .withSchedule(CronScheduleBuilder.cronSchedule(job.getCronExpression()))
+                    .build();
+            scheduler.rescheduleJob(triggerKey, newTrigger);
+        }
+    }
 }

@@ -16,11 +16,11 @@
 * Generate ssh keys using PuTTYgen
 * Used openssl to generate cert of different file type (.cer to .crt)
 
-## Day 24(02/10/25) 
+## Day 24 (02/10/25) 
 * Generate Service Request Requirement/Functional Specification Documents
 
-## Day 25(03/10/25)
-
+## Day 25 (03/10/25)
+* Continued on the Service Request Specification Documents
 
 ## Day 26 (06/10/25)
 

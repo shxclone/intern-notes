@@ -4,16 +4,16 @@ import java.time.LocalDateTime;
 
 public class JobHistoryDTO {
     private Long id;
-    private String jobId;
+    private String jobCode;
     private Integer jobType;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String status;
     private String message;
 
-    public JobHistoryDTO(Long id, String jobId, Integer jobType, LocalDateTime startTime, LocalDateTime endTime, String status, String message) {
+    public JobHistoryDTO(Long id, String jobCode, Integer jobType, LocalDateTime startTime, LocalDateTime endTime, String status, String message) {
         this.id = id;
-        this.jobId = jobId;
+        this.jobCode = jobCode;
         this.jobType = jobType;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -30,12 +30,12 @@ public class JobHistoryDTO {
         this.id = id;
     }
 
-    public String getJobId() {
-        return jobId;
+    public String getJobCode() {
+        return jobCode;
     }
 
-    public void setJobId(String jobId) {
-        this.jobId = jobId;
+    public void setJobCode(String jobCode) {
+        this.jobCode = jobCode;
     }
 
     public Integer getJobType() {

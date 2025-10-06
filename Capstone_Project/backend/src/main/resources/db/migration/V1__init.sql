@@ -26,12 +26,12 @@ CREATE TABLE job_exceptions (
     excep_desc      VARCHAR(4000),
     date_created    TIMESTAMP     DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT pk_job_exceptions PRIMARY KEY (job_id, record_key)
+    CONSTRAINT pk_job_exceptions PRIMARY KEY (job_code, record_key)
 );
 
 CREATE TABLE job_history (
     id SERIAL PRIMARY KEY,
-    job_id VARCHAR(200) NOT NULL,
+    job_code VARCHAR(200) NOT NULL,
     start_time TIMESTAMP NOT NULL,
     end_time TIMESTAMP,
     status VARCHAR(10),
@@ -57,7 +57,7 @@ INSERT INTO jobs (
     date_updated,
     job_type
 ) VALUES
-('Daily Award Sync', 'Y', NOW() - INTERVAL '1 day', 'S', NOW() + INTERVAL '1 day', 'JOB_SYNC_001', 'S', 'DAILY', '0 0 2 * * ?', NOW() - INTERVAL '30 days', NULL, '02:00', 'system', 'system', NOW(), NOW(), 1),
+('Daily Award Sync', 'Y', NOW() - INTERVAL '1 day', 'S', NOW() + INTERVAL '1 day', 'JOB_SYNC_001', 'S', 'DAILY', '0 * * * * ?', NOW() - INTERVAL '30 days', NULL, '02:00', 'system', 'system', NOW(), NOW(), 1),
 ('Weekly Report Generation', 'Y', NOW() - INTERVAL '7 days', 'P', NOW() + INTERVAL '7 days', 'JOB_REP_002', 'P', 'WEEKLY', '0 0 4 * * ?', NOW() - INTERVAL '60 days', NULL, '04:00', 'system', 'admin', NOW(), NOW(), 2),
 ('Monthly Cleanup', 'N', NOW() - INTERVAL '30 days', 'E', NOW() + INTERVAL '30 days', 'JOB_CLN_003', 'E', 'MONTHLY', '0 0 23 1 * ?', NOW() - INTERVAL '120 days', NULL, '23:00', 'system', 'admin', NOW(), NOW(), 3);
 
