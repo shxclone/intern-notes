@@ -135,6 +135,8 @@ public class JobController {
         dto.setStatus(job.getTriggerStatus());
         dto.setLastTriggeredDate(job.getLastTriggeredDate());
         dto.setNextTriggerDate(job.getNextTriggerDate());
+        dto.setStartDate(job.getStartDate());
+        dto.setEndDate(job.getEndDate());
         dto.setLastResult(job.getLastResult());
         dto.setSchedulePeriod(job.getSchedulePeriod());
         dto.setCronExpression(job.getCronExpression());

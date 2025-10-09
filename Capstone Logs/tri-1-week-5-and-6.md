@@ -33,14 +33,20 @@
 * Added on to edit function to ensure changes to CRON expression is translated to the next trigger date
 * History table to display the last 100 jobs with most recent jobs at the top
 
-
 ## Day 27 (07/10/25)
-
+* Research on backend logic and structure for rule based engine
+* Go through the schema required for rule based engine
+* Decided on using partitioning for rule_evaluation_log as queries will become expensive as time goes by:
+    * Currently on PostGreSQL there is no auto partitioning (simulate)
+    * Oracle has interval partitions that enables automatic monthly partitions
+* Decided to set up clean up for logs that are more than 6 months old for data hygiene
+* Prepare migration file for database initialization
 
 ## Day 28 (08/10/25)
-
+* Did not have time to work on Capstone - busy with work
 
 ## Day 29 (09/10/25)
-
+* Did not have time to work on Capstone - busy with work
 
 ## Day 30 (10/10/25)
+* Did not have time to work on Capstone - Had to head back to campus

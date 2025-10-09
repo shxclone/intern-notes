@@ -50,8 +50,8 @@ watch(() => props.job, (job) => {
   minute.value = m
   dayOfWeek.value = dow
   dayOfMonth.value = dom
-  startDate.value = job.startDate
-  endDate.value = job.endDate
+  startDate.value = job.startDate ? job.startDate.split('T')[0] : ''
+  endDate.value = job.endDate ? job.endDate.split('T')[0] : ''
 }, { immediate: true })
 
 const save = async () => {

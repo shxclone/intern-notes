@@ -10,6 +10,7 @@ import org.springframework.data.domain.PageRequest;
 import java.util.List;
 
 public interface JobHistoryRepository extends JpaRepository<JobHistory, Long> {
+    
     List<JobHistory> findByJobCode(String jobCode);
 
     @Query("SELECT j FROM JobHistory j ORDER BY j.startTime DESC")

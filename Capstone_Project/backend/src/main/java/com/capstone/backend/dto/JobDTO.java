@@ -1,5 +1,6 @@
 package com.capstone.backend.dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class JobDTO {
@@ -11,6 +12,8 @@ public class JobDTO {
     private String status;
     private LocalDateTime lastTriggeredDate;
     private LocalDateTime nextTriggerDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private String lastResult;
     private String schedulePeriod;
     private String cronExpression;
@@ -78,6 +81,22 @@ public class JobDTO {
 
     public void setNextTriggerDate(LocalDateTime nextTriggerDate) {
         this.nextTriggerDate = nextTriggerDate;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
     public String getLastResult() {

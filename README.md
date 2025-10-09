@@ -69,6 +69,7 @@ This repository contains a comprehensive daily journal of my Industrial Work-Stu
 ### Notes/Future considerations
 - Global error handler / retry policy
 - Cleanup/archiving policy for old job_execution_history rows (so the table doesn't grow endlessly)
+- Indexing for faster look up
 - How to resolve jobs that depend on a gateway or with external parties - we have no jurisdiction over their system
 - Machine learning for anomaly detection in job behaviour
 - Role-based access control
